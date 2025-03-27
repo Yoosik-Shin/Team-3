@@ -1,0 +1,3 @@
+1Auto Closw
+2Hello Java~!
+3안녕하세요!!
