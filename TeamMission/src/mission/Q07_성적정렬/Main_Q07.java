@@ -14,13 +14,13 @@ import java.util.Scanner;
 // 100 90 75 65 35
 public class Main_Q07 {
 	public static void main(String[] args) {
-		// 1차원 배열에 저장
+		// 학생 5명의 성적, 1차원 배열에 저장
 		int[] gradeList = new int[5];
 
-		// 5명의 JAVA 프로그래밍 성적을 입력받아
 		Scanner sc = new Scanner(System.in);
 
 		for (int index = 0; index < gradeList.length; index++) {
+			// JAVA 프로그래밍 성적을 입력받아
 			gradeList[index] = sc.nextInt();
 			// 성적은 정수 0이상 100이하
 			if (!(gradeList[index] >= 0 && gradeList[index] <= 100)) {
@@ -30,7 +30,7 @@ public class Main_Q07 {
 		}
 		sc.close();
 
-		// 버블정렬
+		// 정렬 방식은 선택정렬, 버블정렬, 삽입정렬 중 하나 - 버블정렬
 		for (int row = 0; row < gradeList.length - 1; row++) {
 			for (int col = 0; col < gradeList.length - 1 - row; col++) {
 				if (gradeList[col] > gradeList[col + 1]) {

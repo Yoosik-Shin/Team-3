@@ -1,5 +1,9 @@
 package mission.Q12_컬렉션_로또;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
 // 정수N을 입력받아 N개의 게임의 로또 번호를 출력하시오.
 // ArrayList를 선언하여 1 ~ 45 사이의 랜덤한 값을 중복되지 않도록 저장하고,
 // 출력하는 과정을 N번 반복하시오.
@@ -20,4 +24,39 @@ package mission.Q12_컬렉션_로또;
 // [5 게임] : 3 11 12 23 31 37
 public class Main_Q12 {
 
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		// 정수N을 입력받아
+		System.out.println("몇게임?");
+		int N = sc.nextInt();
+
+		sc.close();
+
+		for (int i = 0; i < N; i++) {
+
+			// ArrayList를 선언하여 1 ~ 45 사이의 랜덤한 값을 중복되지 않도록 저장
+			ArrayList<Integer> lottoSet = new ArrayList<Integer>();
+
+			System.out.print("[" + (i + 1) + "게임] : ");
+
+			// -랜덤수 6개 대입
+			for (int j = 0; j < N; j++) {
+				int rand = (int) (Math.random() * 45) + 1;
+
+				// 중복 제거
+				if (lottoSet.contains(rand)) j--;
+				else lottoSet.add(rand);
+			}
+
+			// 정렬
+			Collections.sort(lottoSet);
+
+			// 출력
+			for (Integer lotto : lottoSet) {
+				System.out.print(lotto + " ");
+			}
+			System.out.println();
+		}
+	}
 }

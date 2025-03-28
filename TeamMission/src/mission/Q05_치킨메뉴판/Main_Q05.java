@@ -48,6 +48,7 @@ public class Main_Q05 {
 			if (input == 0) break;
 			else if (input < 0 || input > 3) {
 				System.out.println("(0~3) 사이의 번호를 입력해주세요.");
+				System.out.println();
 				continue;
 			}
 
