@@ -1,0 +1,38 @@
+package Day05_0314.Ex05_인자전달;
+
+public class CallByValue {
+
+	public static int sum(int a, int b) {
+		a = 100;
+		b = 200;
+
+		int sum = a + b;
+
+		System.out.println(":::::::::: sum() 메소드 ::::::::::");
+		System.out.println("(a, b) : " + a + "\t" + b);
+		return sum;
+
+	}
+
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 20;
+
+		System.out.println(":::::::::: sum() 메소드 호출 ::::::::::");
+		System.out.println("(a, b) : " + a + "\t" + b);
+
+		int sum = sum(a, b);
+		System.out.println(":::::::::: sum() 메소드 호출 후 ::::::::::");
+		System.out.println("sum : " + sum);
+		System.out.println("(a, b) : " + a + "\t" + b);
+
+		String str = "str";
+		System.out.println(str);
+		changeString(str);
+		System.out.println(str);
+	}
+
+	public static void changeString(String str) {
+		str = "temp";
+	}
+}
