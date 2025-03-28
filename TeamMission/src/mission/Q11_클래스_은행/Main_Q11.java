@@ -121,7 +121,7 @@ public class Main_Q11 {
 					if (check != 1)
 						continue;
 					
-					asAccount.add
+					// asAccount.add ;
 					
 					
 					// 입력>> 2

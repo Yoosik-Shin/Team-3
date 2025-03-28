@@ -63,6 +63,7 @@ public class Main_Q02_1 {
 			}
 		}
 
+		// 홀수
 		for (int index = 0; index < oddList.size(); index++) {
 			if (index != 0)
 				System.out.print("+");
@@ -70,6 +71,7 @@ public class Main_Q02_1 {
 		}
 		System.out.println("=" +oddSum) ;
 		
+		// 짝수
 		for (int index = 0; index < evenList.size(); index++) {
 			if (index != 0)
 				System.out.print("+");
@@ -77,6 +79,7 @@ public class Main_Q02_1 {
 		}
 		System.out.println("=" +evenSum) ;
 		
+		// 약수
 		for (int index = 0; index < divisorList.size(); index++) {
 			if (index != 0)
 				System.out.print(" ");

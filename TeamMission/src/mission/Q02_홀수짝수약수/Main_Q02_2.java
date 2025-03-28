@@ -1,8 +1,8 @@
 package mission.Q02_홀수짝수약수;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 // 정수 하나를 입력받아, 정수형 변수N에 초기화시키고,
@@ -45,23 +45,25 @@ public class Main_Q02_2 {
 		for (int number = 1; number <= input; number++) {
 			numList.add(number);
 		}
-		
-		// 홀수 가져오기
-		Predicate<Integer> predicate = num -> num % 2 != 0;
-		String result = numList.stream().filter(predicate).map(String::valueOf).collect(Collectors.joining("+"));
-		int sum = numList.stream().filter(predicate).mapToInt(Integer::intValue).sum();
-		System.out.println(result + "=" + sum);
-		
-		// 짝수 가져오기
-		predicate = num -> num % 2 == 0;
-		result = numList.stream().filter(predicate).map(String::valueOf).collect(Collectors.joining("+"));
-		sum = numList.stream().filter(predicate).mapToInt(Integer::intValue).sum();
-		System.out.println(result + "=" + sum);
-		
-		// 약수
+
+		// 가져오기
 		final int temp = input;
-		predicate = num -> temp % num == 0;
-		result = numList.stream().filter(predicate).map(String::valueOf).collect(Collectors.joining(" "));
-		System.out.println(result);
+
+		List<Integer> addList    = numList.stream().filter(num -> num % 2 != 0).collect(Collectors.toList());
+		List<Integer> evenList   = numList.stream().filter(num -> num % 2 == 0).collect(Collectors.toList());
+		String        divisorStr = numList.stream().filter(num -> temp % num == 0).map(String::valueOf)
+				.collect(Collectors.joining(" "));
+
+		int    addSum = addList.stream().mapToInt(Integer::intValue).sum();
+		String addStr = addList.stream().map(String::valueOf).collect(Collectors.joining("+"));
+		System.out.println(addStr + "=" + addSum);
+
+		// 짝수 가져오기
+		int    evenSum = evenList.stream().mapToInt(Integer::intValue).sum();
+		String evenStr = evenList.stream().map(String::valueOf).collect(Collectors.joining("+"));
+		System.out.println(evenStr + "=" + evenSum);
+
+		// 약수
+		System.out.println(divisorStr);
 	}
 }
