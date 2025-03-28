@@ -4,11 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 /**
  * 책 (Book) 을 가격순으로 오름차순 정렬
@@ -19,7 +16,6 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @Builder
-
 
 class Book implements Comparable<Book> {
 	

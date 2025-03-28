@@ -18,9 +18,9 @@ public class StringTokenizerEx {
 		System.out.println("토큰의 개수 : " + st.countTokens());
 		
 		// 토큰 반복하기
-		while( st.hasMoreTokens() ) {				// 다음 토큰이 있으면 반복
-			String token = st.nextToken();			// 다음 토큰 가져와서 token 에 대입
-			System.out.print(token + " ");			// 토큰을 한 칸씩 띄워서 출력
+		while( st.hasMoreTokens() ) {		// 다음 토큰이 있으면 반복
+			String token = st.nextToken();	// 다음 토큰 가져와서 token에 대입
+			System.out.print(token + " ");	// 토큰을 한 칸씩 띄워서 출력
 		}
 		System.out.println();
 	}
