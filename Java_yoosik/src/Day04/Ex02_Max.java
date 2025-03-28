@@ -3,7 +3,7 @@ package Day04;
 import java.util.Scanner;
 
 public class Ex02_Max {
-
+ 
 	public static void main(String[] args) {
 		// 첫번째 줄에 입력할 개수 N을 입력받고
 		// 둘째 줄에 N개의 정수를 공백을 두고 입력 받으시오.
