@@ -1,4 +1,4 @@
-package mission.q14;
+package mission.Q14_컬렉션_코딩대회;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package mission.q16;
+package mission.Q16_추상클래스_도형;
 
 public class Point {
 	int x;

@@ -1,11 +1,7 @@
-package mission.q16;
+package mission.Q16_추상클래스_도형;
 
 public class Circle extends Shape {
 	private double radius;
-
-	// 생성자
-//	public Circle() {
-//	}
 
 	public Circle(double radius) {
 		this.radius = radius;

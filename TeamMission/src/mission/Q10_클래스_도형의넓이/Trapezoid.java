@@ -1,4 +1,4 @@
-package mission.q10;
+package mission.Q10_클래스_도형의넓이;
 
 public class Trapezoid {
 

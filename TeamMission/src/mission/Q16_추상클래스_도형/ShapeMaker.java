@@ -1,4 +1,4 @@
-package mission.q16;
+package mission.Q16_추상클래스_도형;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -54,10 +54,13 @@ public class ShapeMaker {
 
 				// 비우기
 				sc.nextLine();
-			}
+			} // End while
 		}
 
-		// 도형들의 넓이와 둘레 출력
+		// 리스트에 존재하는 도형들의 둘레와 넓이 구하기
+		// double sumArea = shapeList.stream().mapToDouble(Shape::area).sum();
+		// double sumRound = shapeList.stream().mapToDouble(Shape::round).sum();
+		
 		System.out.println("--- 도형들의 넓이와 둘레 ---");
 
 		double sumArea  = 0.0;
@@ -68,10 +71,6 @@ public class ShapeMaker {
 			sumArea  += shape.area();
 			sumRound += shape.round();
 		}
-
-		// 리스트에 존재하는 도형들의 둘레와 넓이 구하기
-		// double sumArea = shapeList.stream().mapToDouble(Shape::area).sum();
-		// double sumRound = shapeList.stream().mapToDouble(Shape::round).sum();
 
 		// 도형들의 넓이 총합과 둘레 총합 출력
 		System.out.println("\n넓이 총합: " + sumArea);

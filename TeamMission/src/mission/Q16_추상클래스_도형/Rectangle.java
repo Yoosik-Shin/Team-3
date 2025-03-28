@@ -1,27 +1,26 @@
-package mission.q16;
+package mission.Q16_추상클래스_도형;
 
-public class Triangle extends Shape {
+public class Rectangle extends Shape {
 
 	double width;	// 가로
 	double height;	// 높이
 
-	// 생성자
-//	public Triangle() {
+//	public Rectangle() {
 //	}
 
-	public Triangle(double width, double height) {
+	public Rectangle(double width, double height) {
 		this.width  = width;
 		this.height = height;
 	}
 
 	@Override
 	double area() {
-		return (this.width * this.height) / 2;
+		return this.width * this.height;
 	}
 
 	@Override
 	double round() {
-		return 3 * this.width;
+		return (this.width + this.height) * 2;
 	}
 
 	public double getWidth() {
@@ -42,7 +41,7 @@ public class Triangle extends Shape {
 
 	@Override
 	public String toString() {
-		return "Triangle [width=" + width + ", height=" + height + "]";
+		return "Rectangle [width=" + width + ", height=" + height + "]";
 	}
 
 }
