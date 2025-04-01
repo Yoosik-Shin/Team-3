@@ -6,27 +6,23 @@ public class Book {
 	String title;
 	String writer;
 	String content;
-	int price;
-	
+	int    price;
+
 	public Book() {
-		
+
 	}
-	
-	
-	
+
 	public Book(String isbn, int price) {
-		this.isbn = isbn;
+		this.isbn  = isbn;
 		this.price = price;
 	}
-
-
 
 	public Book(String isbn, String title, String writer, String content, int price) {
-		this.isbn = isbn;
-		this.title = title;
-		this.writer = writer;
+		this.isbn    = isbn;
+		this.title   = title;
+		this.writer  = writer;
 		this.content = content;
-		this.price = price;
+		this.price   = price;
 	}
 
 	public String getIsbn() {
@@ -67,15 +63,11 @@ public class Book {
 
 	public void setPrice(int price) {
 		this.price = price;
-	}	
+	}
 
 	@Override
 	public String toString() {
 		return "" + isbn + "|" + title + "\t\s\s\s|" + writer + "\t|" + content + "\t\s|" + price + "";
 	}
 
-
-	
-	
-	
 }
