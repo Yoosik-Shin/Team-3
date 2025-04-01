@@ -1,4 +1,4 @@
-package Q11;
+package mission.yoosik.Q11;
 
 import java.util.ArrayList;
 

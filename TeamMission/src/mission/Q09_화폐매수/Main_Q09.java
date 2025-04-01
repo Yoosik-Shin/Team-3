@@ -120,6 +120,7 @@ public class Main_Q09 {
 				units[index] += person.units[index];
 			}
 		}
+
 		System.out.print("전체화폐매수");
 		for (int unit : units) {
 			System.out.print("\t" + unit);
