@@ -1,12 +1,9 @@
-package mission.Q14_컬렉션_코딩대회;
+package mission.jayoung.Q14_코딩대회;
+
 import java.util.Scanner;
 
+
 public class StudentScore {
-	// ALOHA 스터디에서 월말 코딩대회를 열었다.
-	// 매니저는 학생들의 성적을 취합하여 "student.txt" 파일로 정리하였다.
-	// 한학생의 성적은 다음과 같은 양식으로 기록되어있다.
-	// txt 파일에서 학생들의 성적정보(번호/이름/성적/수업이름)를 추출하여,
-	// 성적순으로 내림차순, 번호순으로 오름차순 정렬하여 출력하시오.
 
 	// 10반
 	// 20명
@@ -18,24 +15,28 @@ public class StudentScore {
 	static double[][][] classStudentData = new double[10][20][2];
 	// 반등수, 전교등수
 	static int[][][] classStudentRank = new int[10][20][2];
+
 	// 과목별 반등수, 전교등수
 	static int[][][][] subjectStudentRank = new int[10][20][6][2];
+
 	// 학생이름
 	static String[][] classStudentName = new String[10][20];
+
 	// 학생수
 	static int[] classCount = new int[10];
 	// 반별 총점
 	static int[][] classTotalScore = new int[10][6 + 1];
 	// 반별 평균
 	static double[][] classTotalAverage = new double[10][6 + 1];
+
 	// 반 입력여부
 	static boolean[] classYn = new boolean[10];
 	// 학생 입력여부
 	static boolean[][] studentYn = new boolean[10][20];
+
 	// 과목
 	static String[] subjects = {"국어", "영어", "수학", "사회", "과학", "자바"};
-
-	static Scanner sc = new Scanner(System.in);
+	static Scanner  sc       = new Scanner(System.in);
 
 	/**
 	 * 숫자만 입력
@@ -116,36 +117,34 @@ public class StudentScore {
 	public static void input() {
 		System.out.println("========= 1. 성적 입력 =========");
 		System.out.println(">> 반 번호(1~10) ");
-		int classNo   = inputNo(1, 10);		// (start~end) 사이의 숫자만 입력
+		int classNo   = inputNo(1, 10);
 		int studentNo = 0;
 
 		System.out.println("(1) 일괄 입력");
 		System.out.println("(2) 개별 입력");
-		int inputMenu = inputNo(1, 2);		// (start~end) 사이의 숫자만 입력
+		int inputMenu = inputNo(1, 2);
 
 		switch (inputMenu) {
 			case 1 :
-				// 성적 입력 (일괄 입력)
 				inputAll(classNo);
 				break;
 			case 2 :
 				System.out.print(">> 학생 번호(1~20) : ");
 				studentNo = sc.nextInt();
-				// 성적 입력 (개별 입력)
 				inputStudent(classNo, studentNo);
 			default :
 				break;
 		}
+
 	}
 
 	/**
 	 * 1. 성적 입력 (1) 일괄 입력
-	 * 학생 수 만큼 이름과 성적 입력
 	 */
 	public static void inputAll(int classNo) {
 		System.out.println("========= 1-(1). 일괄 입력 =========");
 		System.out.println(">> 학생 수 ");
-		int studentCount = inputNo(1, 20);			// (start~end) 사이의 숫자만 입력
+		int studentCount = inputNo(1, 20);
 		classCount[classNo - 1] = studentCount;
 
 		for (int i = 0; i < studentCount; i++) {
@@ -156,7 +155,6 @@ public class StudentScore {
 			classStudentName[classNo - 1][i] = sc.next();
 			// 성적
 			System.out.println(">> 성적 :");
-			// 과목 출력
 			subjects();
 			for (int j = 0; j < classStudentScore[classNo][i].length; j++) {
 				classStudentScore[classNo - 1][i][j] = inputNo(0, 100, ">> " + subjects[j] + " : ");
@@ -518,29 +516,23 @@ public class StudentScore {
 	public static void main(String[] args) {
 
 		do {
-			// 메뉴 출력
 			int menuNo = menu();
 			if (menuNo == 0) break;
 
 			switch (menuNo) {
 				case 1 :
-					// 성적 입력
 					input();
 					break;
 				case 2 :
-					// 전체 조회
 					listAll();
 					break;
 				case 3 :
-					// 반 별 조회
 					classList();
 					break;
 				case 4 :
-					// 과목별 조회
 					subjectList();
 					break;
 				case 5 :
-					// 학생 조회
 					searchStudent();
 					break;
 				default :
