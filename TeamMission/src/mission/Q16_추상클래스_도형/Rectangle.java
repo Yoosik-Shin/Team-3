@@ -5,9 +5,6 @@ public class Rectangle extends Shape {
 	double width;	// 가로
 	double height;	// 높이
 
-//	public Rectangle() {
-//	}
-
 	public Rectangle(double width, double height) {
 		this.width  = width;
 		this.height = height;
@@ -43,5 +40,4 @@ public class Rectangle extends Shape {
 	public String toString() {
 		return "Rectangle [width=" + width + ", height=" + height + "]";
 	}
-
 }

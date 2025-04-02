@@ -15,10 +15,15 @@ public class ShapeMaker {
 
 		try (Scanner sc = new Scanner(System.in)) {
 
-			String shapeSelect;
-
 			while (true) {
-				shapeSelect = sc.nextLine();
+				
+				System.out.println("도형을 선택하세요.");
+				System.out.println("삼각형");
+				System.out.println("사각형");
+				System.out.println("원형");
+				System.out.println("그만");
+				
+				String shapeSelect = sc.nextLine();
 
 				if ("그만".equals(shapeSelect)) {
 					break;  // "그만"을 입력하면 루프 종료
@@ -48,7 +53,7 @@ public class ShapeMaker {
 					break;
 
 				default:
-					System.out.println("잘못된 입력입니다.");
+					System.out.println("메뉴를 확인해 주세요");
 					break;
 				}
 
@@ -67,15 +72,14 @@ public class ShapeMaker {
 		double sumRound = 0.0;
 
 		for (Shape shape : shapeList) {
-			System.out.println("넓이 : " + shape.area() + ",\t둘레 : " + shape.round());
+			System.out.println("넓이 : " + shape.area() + "\t둘레 : " + shape.round());
 			sumArea  += shape.area();
 			sumRound += shape.round();
 		}
+		System.out.println();
 
 		// 도형들의 넓이 총합과 둘레 총합 출력
-		System.out.println("\n넓이 총합: " + sumArea);
+		System.out.println("넓이 총합: " + sumArea);
 		System.out.println("둘레 총합: " + sumRound);
-
 	}
-
 }
