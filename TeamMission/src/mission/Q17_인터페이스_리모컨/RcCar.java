@@ -3,8 +3,8 @@ package mission.Q17_인터페이스_리모컨;
 // - RemoteControl 인터페이스를 구현하시오.
 // - 멤버변수 "배터리, 속력"을 선언하시오.
 public class RcCar implements RemoteControl {
-	public final int MAX_SPEED = 100;
-	public final int MIN_SPEED = 0;
+	public static final int MAX_SPEED = 100;
+	public static final int MIN_SPEED = 0;
 	double    battery;		// 배터리
 	double    speed;		// 속력
 

@@ -12,13 +12,13 @@ public class Driver {
 		rcCar.on();
 		System.out.println();
 
-		drone.setSpeed(drone.MAX_SPEED + 1);
-		drone.setSpeed(drone.MIN_SPEED - 1);
+		drone.setSpeed(Drone.MAX_SPEED + 1);
+		drone.setSpeed(Drone.MIN_SPEED - 1);
 		drone.setSpeed(50);
 		System.out.println();
 
-		rcCar.setSpeed(rcCar.MAX_SPEED + 1);
-		rcCar.setSpeed(rcCar.MIN_SPEED - 1);
+		rcCar.setSpeed(RcCar.MAX_SPEED + 1);
+		rcCar.setSpeed(RcCar.MIN_SPEED - 1);
 		rcCar.setSpeed(50);
 		System.out.println();
 
