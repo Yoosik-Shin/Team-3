@@ -9,6 +9,7 @@ public class Driver {
 		RemoteControl rcCar = new RcCar();
 
 		drone.on();
+		System.out.println();
 		rcCar.on();
 		System.out.println();
 

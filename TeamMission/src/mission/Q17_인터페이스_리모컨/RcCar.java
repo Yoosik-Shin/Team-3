@@ -16,7 +16,7 @@ public class RcCar implements RemoteControl {
 
 	@Override
 	public void off() {
-		System.out.println("RcCar의 전원을 켭니다.");
+		System.out.println("RcCar의 전원을 끕니다.");
 		setSpeed(0);
 	}
 
